@@ -33,18 +33,18 @@ var topo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USG
 	attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
 });
 
-let baseMaps = (
+let baseMaps = {
   Street: street,
   Topographic: topo
-  )
+}
 
-  let overLayMaps = (
+  let overLayMaps = {
   CPCC: CPCC
-  )
+  }
 
-  let map = L.map("map",{
+  let map = L.map("map", {
   center: [35.217665, -80.831473],
-  zoom: 16
+  zoom: 16,
   layers: [street, CPCC]
 });
 
